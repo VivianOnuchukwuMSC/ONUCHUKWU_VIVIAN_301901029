@@ -1,11 +1,9 @@
 # Bank / Fintech Platform
 
-# VIVIAN ONUCHUKWU · Student ID 301901029
-
 # Database Systems & Cloud Portfolio Project
-Student Name: Onuchukwu Vivian
-Student ID: 301901029
-Institution: MIVA Open University / MIT Program
+# Student Name: Onuchukwu Vivian
+# Student ID: 301901029
+# Institution: MIVA Open University / MIT Program
 
 # 📌 Project Overview
 This repository contains a comprehensive, multi-part database management and distributed cloud engineering portfolio. It demonstrates rigorous competency in relational database design, advanced query optimisation, transaction management & concurrency control, NoSQL document modeling, and distributed cloud architecture.
