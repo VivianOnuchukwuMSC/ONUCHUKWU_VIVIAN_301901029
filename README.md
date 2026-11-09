@@ -1,16 +1,16 @@
 # Bank / Fintech Platform
 
-VIVIAN ONUCHUKWU · Student ID 301901029
+# VIVIAN ONUCHUKWU · Student ID 301901029
 
-Database Systems & Cloud Portfolio Project
+# Database Systems & Cloud Portfolio Project
 Student Name: Onuchukwu Vivian
 Student ID: 301901029
 Institution: MIVA Open University / MIT Program
 
-📌 Project Overview
+# 📌 Project Overview
 This repository contains a comprehensive, multi-part database management and distributed cloud engineering portfolio. It demonstrates rigorous competency in relational database design, advanced query optimisation, transaction management & concurrency control, NoSQL document modeling, and distributed cloud architecture.
 
-📂 Repository Structure
+# 📂 Repository Structure
 Plaintext
 ONUCHUKWU_VIVIAN_301901029-main/
 │
@@ -66,28 +66,28 @@ Key Artifacts: DDL schemas (_P1_Schema.sql), dummy instantiation datasets (_P1_S
 
 Highlights: Ensures data integrity via foreign keys, check constraints, and custom validation rules.
 
-2. Query Optimisation & Indexing (portfolio-2-query-optimisation/)
+# 2. Query Optimisation & Indexing (portfolio-2-query-optimisation/)
 Focus: Identifying bottlenecks in complex joins, aggregate queries, and subqueries.
 
 Key Artifacts: Unoptimised vs. tuned scripts (_P2_Queries.sql, _P2_Optimisation.sql) backed by execution plan screenshots.
 
 Highlights: Implements strategic composite and covering indexes to drastically minimize cost metrics and execution time.
 
-3. Transactions & Concurrency Control (portfolio-3-transactions-concurrency/)
+# 3. Transactions & Concurrency Control (portfolio-3-transactions-concurrency/)
 Focus: Ensuring ACID properties, managing isolation levels, and diagnosing concurrency anomalies (e.g., Dirty Reads, Non-Repeatable Reads, Phantoms, Deadlocks).
 
 Key Artifacts: Concurrent simulation sessions (_P3_SessionA.sql, _P3_SessionB.sql) and transaction scripts.
 
 Highlights: Illustrates fine-grained control over locks, commits, and rollbacks.
 
-4. NoSQL Document Modeling (portfolio-4-nosql/)
+# 4. NoSQL Document Modeling (portfolio-4-nosql/)
 Focus: Transitioning from relational paradigms to flexible schema design using MongoDB.
 
 Key Artifacts: Native aggregation pipeline scripts and collection queries (_P4_MongoDB.js).
 
 Highlights: Optimized embedding versus referencing strategies tailored for high read-throughput web and mobile workloads.
 
-5. Distributed Cloud Architecture (portfolio-5-distributed-cloud/)
+# 5. Distributed Cloud Architecture (portfolio-5-distributed-cloud/)
 Focus: Designing resilient, highly available, and horizontally scalable cloud infrastructures.
 
 Key Artifacts: Architectural blueprints and structured documentation (_P5_README.md).
@@ -119,7 +119,7 @@ Execute NoSQL Scripts:
 Bash
 mongosh < portfolio-4-nosql/ONUCHUKWU_VIVIAN_301901029_P4_MongoDB.js
 
-📄 License & Academic Integrity
+# 📄 License & Academic Integrity
 This work was completed independently as part of coursework requirements at MIVA Open University. All rights reserved.
 
 The portfolio uses fictional records for Bank / Fintech Platform.
