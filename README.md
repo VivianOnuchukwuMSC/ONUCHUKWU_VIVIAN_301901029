@@ -339,12 +339,7 @@ I used GitHub Copilot and a portfolio generator to help prepare the database mod
 
 
 
-│       └── ONUCHUKWU_VIVIAN_301901029_P4_DocumentsAndQueries.png
-│
-└── portfolio-5-distributed-cloud/                # Scalable & Fault-Tolerant Cloud Architecture
-    ├── ONUCHUKWU_VIVIAN_301901029_P5_README.md
-    └── screenshots/
-        └── ONUCHUKWU_VIVIAN_301901029_P5_ProposedDesign.png
+
         
 ## 🛠 Portfolio Component Breakdown
 #### 1. Relational Database Design (portfolio-1-database-design/)
