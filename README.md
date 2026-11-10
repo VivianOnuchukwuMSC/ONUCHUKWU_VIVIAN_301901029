@@ -355,14 +355,7 @@ I used GitHub Copilot and a portfolio generator to help prepare the database mod
 
 
 
-### Step-by-Step Execution
-Setup Relational Schema:
 
-SQL
--- Run in your SQL client
-\i portfolio-1-database-design/ONUCHUKWU_VIVIAN_301901029_P1_Schema.sql
-\i portfolio-1-database-design/ONUCHUKWU_VIVIAN_301901029_P1_SampleData.sql
-Test Constraints:
 
 SQL
 \i portfolio-1-database-design/ONUCHUKWU_VIVIAN_301901029_P1_ConstraintTests.sql
