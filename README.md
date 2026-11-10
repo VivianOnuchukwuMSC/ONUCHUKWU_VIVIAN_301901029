@@ -359,10 +359,7 @@ I used GitHub Copilot and a portfolio generator to help prepare the database mod
 
 
 
-# 📄 License & Academic Integrity
-This work was completed independently as part of coursework requirements at MIVA Open University. All rights reserved.
 
-The portfolio uses fictional records for Bank / Fintech Platform.
 
 - [Portfolio 1](portfolio-1-database-design/)
 - [Portfolio 2](portfolio-2-query-optimisation/)
