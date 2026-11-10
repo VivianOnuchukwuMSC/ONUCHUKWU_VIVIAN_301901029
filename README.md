@@ -338,19 +338,7 @@ I used GitHub Copilot and a portfolio generator to help prepare the database mod
 
 
 
-# ACID Compliance & Concurrency Control
-│   ├── ONUCHUKWU_VIVIAN_301901029_P3_Transactions.sql
-│   ├── ONUCHUKWU_VIVIAN_301901029_P3_SessionA.sql
-│   ├── ONUCHUKWU_VIVIAN_301901029_P3_SessionB.sql
-│   ├── ONUCHUKWU_VIVIAN_301901029_P3_README.md
-│   └── screenshots/
-│       ├── ONUCHUKWU_VIVIAN_301901029_P3_CommitRollback.png
-│       └── ONUCHUKWU_VIVIAN_301901029_P3_ConcurrencyResult.png
-│
-├── portfolio-4-nosql/                            # Document-Based NoSQL Modeling (MongoDB)
-│   ├── ONUCHUKWU_VIVIAN_301901029_P4_MongoDB.js
-│   ├── ONUCHUKWU_VIVIAN_301901029_P4_README.md
-│   └── screenshots/
+
 │       └── ONUCHUKWU_VIVIAN_301901029_P4_DocumentsAndQueries.png
 │
 └── portfolio-5-distributed-cloud/                # Scalable & Fault-Tolerant Cloud Architecture
