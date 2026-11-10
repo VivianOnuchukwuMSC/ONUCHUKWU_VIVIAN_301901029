@@ -341,9 +341,6 @@ I used GitHub Copilot and a portfolio generator to help prepare the database mod
 
 
         
-## 🛠 Portfolio Component Breakdown
-#### 1. Relational Database Design (portfolio-1-database-design/)
-Focus: Conceptual mapping, logical design, and normalisation up to Third Normal Form (3NF).
 
 Key Artifacts: DDL schemas (_P1_Schema.sql), dummy instantiation datasets (_P1_SampleData.sql), and rigid constraint test scripts (_P1_ConstraintTests.sql).
 
