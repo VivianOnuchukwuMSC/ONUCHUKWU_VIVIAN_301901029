@@ -357,15 +357,7 @@ I used GitHub Copilot and a portfolio generator to help prepare the database mod
 
 
 
-SQL
-\i portfolio-1-database-design/ONUCHUKWU_VIVIAN_301901029_P1_ConstraintTests.sql
-Run Query Optimisation Tests:
-Execute scripts inside portfolio-2-query-optimisation/ with execution plans (EXPLAIN / EXPLAIN ANALYZE) enabled.
 
-Execute NoSQL Scripts:
-
-Bash
-mongosh < portfolio-4-nosql/ONUCHUKWU_VIVIAN_301901029_P4_MongoDB.js
 
 # 📄 License & Academic Integrity
 This work was completed independently as part of coursework requirements at MIVA Open University. All rights reserved.
