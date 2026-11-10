@@ -338,12 +338,6 @@ I used GitHub Copilot and a portfolio generator to help prepare the database mod
 
 
 │
-├── ONUCHUKWU_VIVIAN_301901029_FinalSummary.md    # Executive summary of the entire portfolio
-├── ONUCHUKWU_VIVIAN_301901029_FinalSummary.pdf    # PDF version of the final summary
-├── README.md                                      # Main project documentation
-├── images/                                        # Global architecture and ER diagrams
-│   └── ONUCHUKWU_VIVIAN_301901029_ERDiagram.png
-│
 ├── portfolio-1-database-design/                   # Relational Database Design & Normalisation
 │   ├── ONUCHUKWU_VIVIAN_301901029_P1_Design.md
 │   ├── ONUCHUKWU_VIVIAN_301901029_P1_ERDiagram.md
