@@ -342,9 +342,7 @@ I used GitHub Copilot and a portfolio generator to help prepare the database mod
 
         
 
-Key Artifacts: DDL schemas (_P1_Schema.sql), dummy instantiation datasets (_P1_SampleData.sql), and rigid constraint test scripts (_P1_ConstraintTests.sql).
 
-Highlights: Ensures data integrity via foreign keys, check constraints, and custom validation rules.
 
 # 2. Query Optimisation & Indexing (portfolio-2-query-optimisation/)
 Focus: Identifying bottlenecks in complex joins, aggregate queries, and subqueries.
