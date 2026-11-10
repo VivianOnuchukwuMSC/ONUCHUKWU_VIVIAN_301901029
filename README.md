@@ -337,7 +337,7 @@ I used GitHub Copilot and a portfolio generator to help prepare the database mod
 
 
 
-# 📌 Project Overview
+
 This repository contains a comprehensive, multi-part database management and distributed cloud engineering portfolio. It demonstrates rigorous competency in relational database design, advanced query optimisation, transaction management & concurrency control, NoSQL document modeling, and distributed cloud architecture.
 
 # 📂 Repository Structure
