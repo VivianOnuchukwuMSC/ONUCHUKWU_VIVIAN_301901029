@@ -347,14 +347,7 @@ I used GitHub Copilot and a portfolio generator to help prepare the database mod
 
 
 
-Highlights: Implements strategic composite and covering indexes to drastically minimize cost metrics and execution time.
 
-# 3. Transactions & Concurrency Control (portfolio-3-transactions-concurrency/)
-Focus: Ensuring ACID properties, managing isolation levels, and diagnosing concurrency anomalies (e.g., Dirty Reads, Non-Repeatable Reads, Phantoms, Deadlocks).
-
-Key Artifacts: Concurrent simulation sessions (_P3_SessionA.sql, _P3_SessionB.sql) and transaction scripts.
-
-Highlights: Illustrates fine-grained control over locks, commits, and rollbacks.
 
 # 4. NoSQL Document Modeling (portfolio-4-nosql/)
 Focus: Transitioning from relational paradigms to flexible schema design using MongoDB.
