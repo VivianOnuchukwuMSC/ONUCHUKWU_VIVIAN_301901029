@@ -1,6 +1,7 @@
 # Bank / Fintech Platform: Advanced Database Systems Portfolio
 
-**Student:** Vivian Onuchukwu · **Student ID:** 301901029
+**Student:** Vivian Onuchukwu·<br/> 
+**Student ID:** 301901029
 **Programme:** MSc Information Technology (MIT), Miva Open University
 **Module:** MIT 8103 Advanced Database Systems
 **Repository:** https://github.com/VivianOnuchukwuMSC/ONUCHUKWU_VIVIAN_301901029
