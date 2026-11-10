@@ -353,11 +353,7 @@ I used GitHub Copilot and a portfolio generator to help prepare the database mod
 
 
 
-### 🚀 Getting Started / Execution Instructions
-Prerequisites
-A running relational database engine (e.g., PostgreSQL or MySQL) for Portfolio parts 1 to 3.
 
-MongoDB Shell (mongosh) or MongoDB Compass for Portfolio part 4.
 
 ### Step-by-Step Execution
 Setup Relational Schema:
