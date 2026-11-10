@@ -337,17 +337,7 @@ I used GitHub Copilot and a portfolio generator to help prepare the database mod
 
 
 
-│
-├── portfolio-1-database-design/                   # Relational Database Design & Normalisation
-│   ├── ONUCHUKWU_VIVIAN_301901029_P1_Design.md
-│   ├── ONUCHUKWU_VIVIAN_301901029_P1_ERDiagram.md
-│   ├── ONUCHUKWU_VIVIAN_301901029_P1_Normalisation.md
-│   ├── ONUCHUKWU_VIVIAN_301901029_P1_Schema.sql
-│   ├── ONUCHUKWU_VIVIAN_301901029_P1_SampleData.sql
-│   ├── ONUCHUKWU_VIVIAN_301901029_P1_ConstraintTests.sql
-│   ├── ONUCHUKWU_VIVIAN_301901029_P1_README.md
-│   └── screenshots/
-│       └── ONUCHUKWU_VIVIAN_301901029_P1_DatabaseResults.png
+
 │
 ├── portfolio-2-query-optimisation/               # Performance Tuning & Execution Plans
 │   ├── ONUCHUKWU_VIVIAN_301901029_P2_Queries.sql
