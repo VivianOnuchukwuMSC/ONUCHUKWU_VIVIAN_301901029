@@ -3,7 +3,7 @@
 
 **Student:** Vivian Onuchukwu·<br/> 
 **Student ID:** 301901029<br/> 
-**Programme:** MSc Information Technology (MIT), Miva Open University<br/> 
+**Programme:** Masters In Information Technology (MIT), Miva Open University<br/> 
 **Module:** MIT 8103 Advanced Database Systems<br/> 
 **Repository:** https://github.com/VivianOnuchukwuMSC/ONUCHUKWU_VIVIAN_301901029
 
