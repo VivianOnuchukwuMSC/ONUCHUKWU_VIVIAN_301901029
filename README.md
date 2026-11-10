@@ -338,16 +338,7 @@ I used GitHub Copilot and a portfolio generator to help prepare the database mod
 
 
 
-│
-├── portfolio-2-query-optimisation/               # Performance Tuning & Execution Plans
-│   ├── ONUCHUKWU_VIVIAN_301901029_P2_Queries.sql
-│   ├── ONUCHUKWU_VIVIAN_301901029_P2_Optimisation.sql
-│   ├── ONUCHUKWU_VIVIAN_301901029_P2_README.md
-│   └── screenshots/
-│       ├── ONUCHUKWU_VIVIAN_301901029_P2_IndexComparison.png
-│       └── ONUCHUKWU_VIVIAN_301901029_P2_QueryResults.png
-│
-├── portfolio-3-transactions-concurrency/         # ACID Compliance & Concurrency Control
+# ACID Compliance & Concurrency Control
 │   ├── ONUCHUKWU_VIVIAN_301901029_P3_Transactions.sql
 │   ├── ONUCHUKWU_VIVIAN_301901029_P3_SessionA.sql
 │   ├── ONUCHUKWU_VIVIAN_301901029_P3_SessionB.sql
