@@ -333,7 +333,7 @@ I used GitHub Copilot and a portfolio generator to help prepare the database mod
 -
 -
 -
-- # Bank / Fintech Platform
+
 
 ### Student Name: Onuchukwu Vivian
 ### Student ID: 301901029
