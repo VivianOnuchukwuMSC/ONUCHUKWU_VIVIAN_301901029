@@ -351,12 +351,7 @@ I used GitHub Copilot and a portfolio generator to help prepare the database mod
 
 
 
-# 5. Distributed Cloud Architecture (portfolio-5-distributed-cloud/)
-Focus: Designing resilient, highly available, and horizontally scalable cloud infrastructures.
 
-Key Artifacts: Architectural blueprints and structured documentation (_P5_README.md).
-
-Highlights: Explores multi-region database replication, sharding strategies, load balancing, and fault tolerance.
 
 ### 🚀 Getting Started / Execution Instructions
 Prerequisites
