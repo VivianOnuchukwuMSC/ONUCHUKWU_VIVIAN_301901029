@@ -349,12 +349,7 @@ I used GitHub Copilot and a portfolio generator to help prepare the database mod
 
 
 
-# 4. NoSQL Document Modeling (portfolio-4-nosql/)
-Focus: Transitioning from relational paradigms to flexible schema design using MongoDB.
 
-Key Artifacts: Native aggregation pipeline scripts and collection queries (_P4_MongoDB.js).
-
-Highlights: Optimized embedding versus referencing strategies tailored for high read-throughput web and mobile workloads.
 
 # 5. Distributed Cloud Architecture (portfolio-5-distributed-cloud/)
 Focus: Designing resilient, highly available, and horizontally scalable cloud infrastructures.
