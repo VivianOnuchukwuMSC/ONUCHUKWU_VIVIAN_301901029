@@ -346,10 +346,6 @@ I used GitHub Copilot and a portfolio generator to help prepare the database mod
 
 
 
-# 2. Query Optimisation & Indexing (portfolio-2-query-optimisation/)
-Focus: Identifying bottlenecks in complex joins, aggregate queries, and subqueries.
-
-Key Artifacts: Unoptimised vs. tuned scripts (_P2_Queries.sql, _P2_Optimisation.sql) backed by execution plan screenshots.
 
 Highlights: Implements strategic composite and covering indexes to drastically minimize cost metrics and execution time.
 
