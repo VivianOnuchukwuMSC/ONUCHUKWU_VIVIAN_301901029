@@ -336,9 +336,7 @@ I used GitHub Copilot and a portfolio generator to help prepare the database mod
 
 
 
-# 📂 Repository Structure
-Plaintext
-ONUCHUKWU_VIVIAN_301901029-main/
+
 │
 ├── ONUCHUKWU_VIVIAN_301901029_FinalSummary.md    # Executive summary of the entire portfolio
 ├── ONUCHUKWU_VIVIAN_301901029_FinalSummary.pdf    # PDF version of the final summary
