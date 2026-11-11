@@ -3,7 +3,7 @@
 
 -- 1. duplicate customer pk. Expected: pk_customer, SQLSTATE 23505.
 INSERT INTO portfolio."customer" ("customer_id", "full_name", "email", "created_at")
-VALUES (101, 'Duplicate Key Test', 'duplicate.pk@example.test', '2025-04-01T08:00:00Z');
+VALUES (101, 'Duplicate Vivian Key Test', 'duplicate.pk@example.test', '2025-04-01T08:00:00Z');
 
 -- 2. duplicate customer email. Expected: uq_customer_0, SQLSTATE 23505.
 INSERT INTO portfolio."customer" ("customer_id", "full_name", "email", "created_at")
