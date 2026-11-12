@@ -1,6 +1,13 @@
-# MIT 8103 Advanced Database Systems
+# Bank / Fintech Platform:<br/> 
+**Advanced Database Systems Portfolio**
 
-**Bank / Fintech Platform** · VIVIAN ONUCHUKWU · Student ID 301901029
+**Student:** Vivian Onuchukwu<br/> 
+**Student ID:** 301901029<br/> 
+**Programme:** Masters In Information Technology (MIT), Miva Open University<br/> 
+**Module:** MIT 8103 Advanced Database Systems<br/> 
+**Repository:** https://github.com/VivianOnuchukwuMSC/ONUCHUKWU_VIVIAN_301901029
+
+---
 
 ## Case study
 
