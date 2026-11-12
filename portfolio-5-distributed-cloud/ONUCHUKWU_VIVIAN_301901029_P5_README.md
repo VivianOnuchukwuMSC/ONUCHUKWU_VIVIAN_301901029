@@ -4,7 +4,7 @@ This is the proposed distributed design for the case study.
 
 ## Case and proposed deployment
 
-Bank / Fintech Platform keeps its relational records in PostgreSQL. MongoDB stores account_events: Proposed event documents associate an account with payment event history and embed payment details needed for event review. Proposed deployment: the application connects to a three-member MongoDB replica set across three availability zones in one region. PostgreSQL also needs its own managed high-availability configuration. These are separate databases; a MongoDB replica set does not replicate PostgreSQL.
+Banks / Fintech Platform keeps its relational records in PostgreSQL. MongoDB stores account_events: Proposed event documents associate an account with payment event history and embed payment details needed for event review. Proposed deployment: the application connects to a three-member MongoDB replica set across three availability zones in one region. PostgreSQL also needs its own managed high-availability configuration. These are separate databases; a MongoDB replica set does not replicate PostgreSQL.
 
 ## Replication and availability
 
