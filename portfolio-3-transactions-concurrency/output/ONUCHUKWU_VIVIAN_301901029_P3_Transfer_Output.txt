@@ -1,0 +1,86 @@
+-- Real output of ONUCHUKWU_VIVIAN_301901029_P3_Transfer.sql on PostgreSQL 17.11 (Docker, postgres:17), run with psql -e.
+SELECT "account_id", "balance" FROM portfolio."account" WHERE "account_id" IN (201, 202) ORDER BY "account_id";
+ account_id | balance 
+------------+---------
+        201 | 1250.75
+        202 | 3000.00
+(2 rows)
+
+SELECT sum("balance") AS total_before FROM portfolio."account" WHERE "account_id" IN (201, 202);
+ total_before 
+--------------
+      4250.75
+(1 row)
+
+BEGIN;
+BEGIN
+UPDATE portfolio."account" SET "balance" = "balance" - 100.00 WHERE "account_id" = 201;
+UPDATE 1
+UPDATE portfolio."account" SET "balance" = "balance" + 100.00 WHERE "account_id" = 202;
+UPDATE 1
+INSERT INTO portfolio."payment" ("payment_id", "account_id", "amount", "direction", "occurred_at", "status", "reference")
+VALUES (401, 201, 100.00, 'outgoing', now(), 'completed', 'TRF-0001-OUT'),
+       (402, 202, 100.00, 'incoming', now(), 'completed', 'TRF-0001-IN');
+INSERT 0 2
+COMMIT;
+COMMIT
+SELECT "account_id", "balance" FROM portfolio."account" WHERE "account_id" IN (201, 202) ORDER BY "account_id";
+ account_id | balance 
+------------+---------
+        201 | 1150.75
+        202 | 3100.00
+(2 rows)
+
+SELECT sum("balance") AS total_after_transfer FROM portfolio."account" WHERE "account_id" IN (201, 202);
+ total_after_transfer 
+----------------------
+              4250.75
+(1 row)
+
+BEGIN;
+BEGIN
+UPDATE portfolio."account" SET "balance" = "balance" + 5000.00 WHERE "account_id" = 202;
+UPDATE 1
+SELECT "account_id", "balance" AS balance_inside_transaction FROM portfolio."account" WHERE "account_id" = 202;
+ account_id | balance_inside_transaction 
+------------+----------------------------
+        202 |                    8100.00
+(1 row)
+
+UPDATE portfolio."account" SET "balance" = "balance" - 5000.00 WHERE "account_id" = 201;
+ERROR:  new row for relation "account" violates check constraint "account_nonnegative_balance"
+DETAIL:  Failing row contains (201, 101, checking, USD, -3849.25, 2025-01-15, active, 1).
+ROLLBACK;
+ROLLBACK
+SELECT "account_id", "balance" FROM portfolio."account" WHERE "account_id" IN (201, 202) ORDER BY "account_id";
+ account_id | balance 
+------------+---------
+        201 | 1150.75
+        202 | 3100.00
+(2 rows)
+
+SELECT sum("balance") AS total_after_failed_transfer FROM portfolio."account" WHERE "account_id" IN (201, 202);
+ total_after_failed_transfer 
+-----------------------------
+                     4250.75
+(1 row)
+
+SELECT "payment_id" FROM portfolio."payment" ORDER BY "payment_id";
+ payment_id 
+------------
+        301
+        302
+        401
+        402
+(4 rows)
+
+BEGIN;
+BEGIN
+DELETE FROM portfolio."payment" WHERE "payment_id" IN (401, 402);
+DELETE 2
+UPDATE portfolio."account" SET "balance" = 1250.75 WHERE "account_id" = 201;
+UPDATE 1
+UPDATE portfolio."account" SET "balance" = 3000 WHERE "account_id" = 202;
+UPDATE 1
+COMMIT;
+COMMIT

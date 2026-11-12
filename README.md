@@ -1,7 +1,7 @@
 # Bank / Fintech Platform:<br/> 
 **Advanced Database Systems Portfolio**
 
-**Student:** Vivian Onuchukwu·<br/> 
+**Student:** Vivian Onuchukwu<br/> 
 **Student ID:** 301901029<br/> 
 **Programme:** Masters In Information Technology (MIT), Miva Open University<br/> 
 **Module:** MIT 8103 Advanced Database Systems<br/> 
@@ -70,6 +70,10 @@ ONUCHUKWU_VIVIAN_301901029/
 │   ├── ..._P3_Transactions.sql       COMMIT / ROLLBACK exercise
 │   ├── ..._P3_SessionA.sql           two-session script, session A
 │   ├── ..._P3_SessionB.sql           two-session script, session B
+│   ├── ..._P3_Transfer.sql           bank transfer as one transaction
+│   ├── ..._P3_Isolation_SessionA.sql isolation checks, session A
+│   ├── ..._P3_Isolation_SessionB.sql isolation checks, session B
+│   ├── output/                       saved text output of the transfer and isolation runs
 │   └── screenshots/                  commit/rollback, concurrency result
 │
 ├── portfolio-4-nosql/
@@ -182,6 +186,18 @@ A deliberately invalid update (counter set to `-1`) violated the CHECK (SQLSTATE
 
 Without locking, both sessions read `1` and both wrote `2`, so one increment was lost. With `SELECT ... FOR UPDATE`, Session B waited on a row lock until Session A committed. It then read `2` and wrote `3`, which is the correct result.
 
+**Experiment C: a real transfer, and isolation levels**
+
+| Test | Result |
+| --- | --- |
+| Transfer of 100.00 from account 201 to 202 | Both balances and both payment rows committed together. The total stayed at 4250.75. |
+| Failed transfer of 5000.00 | The credit to account 202 showed 8100.00 inside the transaction. The debit broke the balance check, and `ROLLBACK` removed the credit too. |
+| Other session during an uncommitted change | It read 0, then 1 after the commit. |
+| Two `counter + 1` updates | The second waited for the lock and nothing was lost (final value 2). |
+| `REPEATABLE READ` with a concurrent update | Error 40001, "could not serialize access". A retry worked. |
+
+The lost update in Experiment B happens because each session writes a number it worked out earlier. A single `counter + 1` update does not lose anything.
+
 ---
 
 ### Portfolio 4: NoSQL and Advanced Data Models
@@ -271,6 +287,8 @@ Exact timings will vary by machine, but the Seq Scan to Bitmap Index Scan change
 2. Run `ONUCHUKWU_VIVIAN_301901029_P3_Transactions.sql` (adds the helper column and runs the commit/rollback test).
 3. Open **two `psql` terminals** connected to the same database.
 4. Follow the numbered steps **1 to 9** across `..._P3_SessionA.sql` and `..._P3_SessionB.sql`. Step 5 (the reset) runs in Session A **outside** a transaction.
+5. Run `..._P3_Transfer.sql` on its own. It moves money between two accounts, shows a failed transfer being rolled back, and restores the sample data at the end.
+6. Follow steps **0 to 14** across `..._P3_Isolation_SessionA.sql` and `..._P3_Isolation_SessionB.sql` (two terminals, plus an optional third for step 7). Saved output from my own run is in `portfolio-3-transactions-concurrency/output/`.
 
 ### Portfolio 4: MongoDB
 
@@ -302,7 +320,8 @@ Discussion only. Nothing to run.
 
 - All data is fictional and tiny, apart from the generated 25,000-row performance table in Portfolio 2.
 - Index timings are specific to one lookup and one environment and are not general benchmarks.
-- The Portfolio 3 helper column is for the exercise only and is not part of the real design.
+- The Portfolio 3 helper column is for the exercise only and is not part of the real design. The transfer script uses the real tables and puts the sample data back when it finishes.
+- The Portfolio 3 tests ran on PostgreSQL 17.11 in a Docker container. Results can differ on other versions or settings.
 - The MongoDB event snapshots are copies, so they can become stale if the SQL data changes.
 - Portfolio 5 is a proposal and nothing was deployed or failure-tested.
 
@@ -311,6 +330,8 @@ Discussion only. Nothing to run.
 ## 7. AI-use declaration
 
 I used GitHub Copilot and a portfolio generator to help prepare the database model, scripts and explanations. The generator ran the PostgreSQL and MongoDB exercises, checked their outputs and captured the result images. I remain responsible for checking and explaining the submitted work.
+
+In a later review round: The transfer script, the isolation scripts, their saved outputs and the matching README text. Those scripts were run on PostgreSQL 17.11 in a Docker container, and the output in `portfolio-3-transactions-concurrency/output/` comes from those runs.
 
 ---
 
@@ -331,6 +352,5 @@ I used GitHub Copilot and a portfolio generator to help prepare the database mod
 
 - [Final summary (Markdown)](ONUCHUKWU_VIVIAN_301901029_FinalSummary.md) · [PDF](ONUCHUKWU_VIVIAN_301901029_FinalSummary.pdf)
 - Individual portfolio READMEs inside each `portfolio-*` folder
--
 
 
