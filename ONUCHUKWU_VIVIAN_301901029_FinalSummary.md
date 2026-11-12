@@ -19,6 +19,9 @@ My case study is a Bank / Fintech Platform. It serves two groups of users: **cus
 
 I used this one case across all five portfolios so that each stage builds on the previous one: relational design (P1), query optimisation (P2), transactions and concurrency (P3), a document model (P4), and a distributed deployment proposal (P5). All data is fictional. Names and balances are invented, and e-mail addresses use the reserved example.test domain.
 
+**What was executed and what was not.** Portfolios 1 to 4 were run (PostgreSQL 17 and MongoDB) and their results are reported below. Portfolio 5 is the permitted design-discussion option. No cloud service, replica set, failover, sharding or recovery test was run for it.<br/>
+
+
 ## Portfolio 1: Database Design and Modelling
 
 I organised the relational design into 3 tables. Primary keys identify records, foreign keys preserve the links, and checks enforce the stated business rules. A non-null payment reference must be unique among payments. The normalisation examples show the sample data at 1NF, 2NF and 3NF. All 10 deliberately invalid inserts were rejected without changing the valid sample rows.
