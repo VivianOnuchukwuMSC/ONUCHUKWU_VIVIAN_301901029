@@ -1,0 +1,68 @@
+-- Real output of the Isolation Session A and B scripts, run in step order against PostgreSQL 17.11 (Docker, postgres:17). Lines marked [A], [B], [C] are what each psql session printed.
+
+>> step 0 (A):
+   UPDATE portfolio."account" SET "p3_processed_count" = 0 WHERE "account_id" = 202;
+
+>> step 1 (A):
+   BEGIN ISOLATION LEVEL READ COMMITTED;
+   UPDATE portfolio."account" SET "p3_processed_count" = "p3_processed_count" + 1 WHERE "account_id" = 202 RETURNING "p3_processed_count";
+    [A] 1
+
+>> step 2 (B):
+   SELECT "p3_processed_count" FROM portfolio."account" WHERE "account_id" = 202;
+    [B] 0
+
+>> step 3 (A):
+   COMMIT;
+
+>> step 3b (B):
+   SELECT "p3_processed_count" FROM portfolio."account" WHERE "account_id" = 202;
+    [B] 1
+
+>> step 4 (A):
+   UPDATE portfolio."account" SET "p3_processed_count" = 0 WHERE "account_id" = 202;
+
+>> step 5 (A):
+   BEGIN ISOLATION LEVEL READ COMMITTED;
+   UPDATE portfolio."account" SET "p3_processed_count" = "p3_processed_count" + 1 WHERE "account_id" = 202 RETURNING "p3_processed_count";
+    [A] 1
+
+>> step 6 (B):
+   BEGIN ISOLATION LEVEL READ COMMITTED;
+   UPDATE portfolio."account" SET "p3_processed_count" = "p3_processed_count" + 1 WHERE "account_id" = 202 RETURNING "p3_processed_count";
+
+>> step 7 (optional wait check) (C):
+   SELECT pid, state, wait_event_type, wait_event, left(query, 60) AS query FROM pg_stat_activity WHERE datname = current_database() AND wait_event_type = 'Lock';
+    [C] 147|active|Lock|transactionid|UPDATE portfolio."account" SET "p3_processed_count" = "p3_pr
+
+>> step 8 (A):
+   COMMIT;
+    [B] 2
+
+>> step 9 (B):
+   COMMIT;
+   SELECT "p3_processed_count" FROM portfolio."account" WHERE "account_id" = 202;
+    [B] 2
+
+>> step 10 (A):
+   UPDATE portfolio."account" SET "p3_processed_count" = 0 WHERE "account_id" = 202;
+
+>> step 11 (A):
+   BEGIN ISOLATION LEVEL REPEATABLE READ;
+   SELECT "p3_processed_count" FROM portfolio."account" WHERE "account_id" = 202;
+    [A] 0
+
+>> step 12 (B):
+   UPDATE portfolio."account" SET "p3_processed_count" = "p3_processed_count" + 1 WHERE "account_id" = 202 RETURNING "p3_processed_count";
+    [B] 1
+
+>> step 13 (A):
+   UPDATE portfolio."account" SET "p3_processed_count" = "p3_processed_count" + 1 WHERE "account_id" = 202;
+    [A] ERROR:  could not serialize access due to concurrent update
+
+>> step 14 (A):
+   ROLLBACK;
+   BEGIN ISOLATION LEVEL REPEATABLE READ;
+   UPDATE portfolio."account" SET "p3_processed_count" = "p3_processed_count" + 1 WHERE "account_id" = 202 RETURNING "p3_processed_count";
+   COMMIT;
+    [A] 2
