@@ -9,9 +9,15 @@
 
 ---
 
-## Case study
+# 1. Introduction and case study
 
-My case study is Bank / Fintech Platform. I designed the database for customers reviewing their accounts and payment history and bank operations staff monitoring account activity, with separate tables named customer, account and payment. It supports these operations: open an account for a customer; record and review account payments; summarize payment activity by customer.
+My case study is a Bank / Fintech Platform. It serves two groups of users: **customers,** who review their accounts and payment history, and **bank operations staff,** who monitor account activity. It supports three operations:<br/>
+
+**1.** Open an account for a customer.<br/>
+**2** Record and review account payments.<br/>
+**3** Summarise payment activity by customer.<br/>
+
+I used this one case across all five portfolios so that each stage builds on the previous one: relational design (P1), query optimisation (P2), transactions and concurrency (P3), a document model (P4), and a distributed deployment proposal (P5). All data is fictional. Names and balances are invented, and e-mail addresses use the reserved example.test domain.
 
 ## Portfolio 1: Database Design and Modelling
 
