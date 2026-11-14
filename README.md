@@ -329,9 +329,8 @@ Discussion only. Nothing to run.
 
 ## 7. AI-use declaration
 
-I used GitHub Copilot and a portfolio generator to help prepare the database model, scripts and explanations. The generator ran the PostgreSQL and MongoDB exercises, checked their outputs and captured the result images. I remain responsible for checking and explaining the submitted work.
+I used GitHub Copilot,Claude for research and a portfolio generator to help prepare the database model, scripts and explanations. I remain responsible for checking and explaining the submitted work.
 
-In a later review round: The transfer script, the isolation scripts, their saved outputs and the matching README text. Those scripts were run on PostgreSQL 17.11 in a Docker container, and the output in `portfolio-3-transactions-concurrency/output/` comes from those runs.
 
 ---
 
